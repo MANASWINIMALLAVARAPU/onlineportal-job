@@ -1,0 +1,95 @@
+<!-- templates/hospitality.html -->
+{% load static %}
+{% block body %}
+{% include 'navigation.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospitality Jobs</title>
+    <style>
+        body {
+            background-color: #f8f9fa; /* Background color for the entire page */
+        }
+        .container {
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: white; /* Background color for the container */
+            color: black;
+        }
+        .job-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .job-details {
+            margin-bottom: 20px;
+        }
+        .job-image {
+            width: 100px; /* Adjust the size as needed */
+            height: 100px; /* Adjust the size as needed */
+            margin-bottom: 10px;
+        }
+        .apply-button {
+            background-color: #007bff; /* Apply button background color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin-top: 10px;
+        }
+        .apply-button:hover {
+            background-color: #0056b3; /* Apply button hover color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hospitality Jobs</h1>
+        <div class="job">
+            <div class="job-title">Hotel Manager</div>
+            <div class="job-details">
+                <p>Join our team as a Hotel Manager and oversee daily operations.</p>
+                <p>We offer competitive salaries, benefits, and opportunities for career advancement.</p>
+                <p>Apply now and lead our team to success!</p>
+                <img src="{% static 'images/hotel_manager.jpg' %}" alt="Hotel Manager" class="job-image">
+                <button class="apply-button">Apply Now</button>
+            </div>
+        </div>
+        <div class="job">
+            <div class="job-title">Chef</div>
+            <div class="job-details">
+                <p>Join our kitchen team as a Chef and create delicious culinary experiences.</p>
+                <p>We offer a creative work environment, competitive pay, and opportunities for growth.</p>
+                <p>Apply now and showcase your culinary skills!</p>
+                <img src="{% static 'images/chef.jpg' %}" alt="Chef" class="job-image">
+                <button class="apply-button">Apply Now</button>
+            </div>
+        </div>
+        <div class="job">
+            <div class="job-title">Event Coordinator</div>
+            <div class="job-details">
+                <p>Join our events team as an Event Coordinator and plan memorable experiences for our guests.</p>
+                <p>We offer flexible scheduling, training, and a fun work environment.</p>
+                <p>Apply now and be part of our exciting events!</p>
+                <img src="{% static 'images/event_coordinator.jpg' %}" alt="Event Coordinator" class="job-image">
+                <button class="apply-button">Apply Now</button>
+            </div>
+        </div>
+        <div class="job">
+            <div class="job-title">Front Desk Receptionist</div>
+            <div class="job-details">
+                <p>Join our front desk team and provide exceptional customer service to our guests.</p>
+                <p>We offer a supportive work environment, training, and opportunities for advancement.</p>
+                <p>Apply now and welcome guests with a smile!</p>
+                <img src="{% static 'images/front_desk_receptionist.jpg' %}" alt="Front Desk Receptionist" class="job-image">
+                <button class="apply-button">Apply Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% include 'footer.html' %}
+{% endblock %}

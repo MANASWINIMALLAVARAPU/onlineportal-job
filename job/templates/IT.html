@@ -1,0 +1,99 @@
+<!-- templates/it.html -->
+{% load static %}
+{% block body %}
+{% include 'navigation.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Jobs</title>
+    <style>
+        body {
+            background-color: #f8f9fa; /* Background color for the entire page */
+            color: black;
+        }
+        .container {
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: white; /* Background color for the container */
+            color: black;
+        }
+        .job-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .job-details {
+            margin-bottom: 20px;
+        }
+        .job-image {
+            width: 100px; /* Adjust the size as needed */
+            height: 100px; /* Adjust the size as needed */
+            margin-bottom: 10px;
+        }
+        .apply-button {
+            background-color: #007bff; /* Apply button background color */
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin-top: 10px;
+        }
+        .apply-button:hover {
+            background-color: #0056b3; /* Apply button hover color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>IT Jobs</h1>
+        <div class="job">
+            <div class="job-title">Software Engineer</div>
+            <div class="job-details">
+                <p>Join our team as a Software Engineer and work on cutting-edge technologies.</p>
+                <p>We offer competitive salaries, remote work options, and opportunities for skill development.</p>
+                <p>Apply now and be a part of our innovative projects!</p>
+                <img src="{% static 'images/softwareengineer.jpeg' %}" alt="Software Engineer" class="job-image">
+                <button class="apply-button"><a href="{% url 'user_login' %}" style="text-decoration: none; color: inherit;">Apply Now</a></button>
+            </div>
+        </div>
+        <div class="job">
+            <div class="job-title">Data Scientist</div>
+            <div class="job-details">
+                <p>Join our data team as a Data Scientist and analyze complex datasets.</p>
+                <p>We offer a collaborative work environment, flexible hours, and opportunities for career growth.</p>
+                <p>Apply now and leverage your analytical skills!</p>
+                <img src="{% static 'images/datascientist.jpeg' %}" alt="Data Scientist" class="job-image">
+               <button class="apply-button"><a href="{% url 'user_login' %}" style="text-decoration: none; color: inherit;">Apply Now</a></button>
+
+            </div>
+        </div>
+        <div class="job">
+            <div class="job-title">Cybersecurity Analyst</div>
+            <div class="job-details">
+                <p>Join our cybersecurity team as an Analyst and protect our systems from cyber threats.</p>
+                <p>We offer competitive compensation, ongoing training, and a supportive work environment.</p>
+                <p>Apply now and help us safeguard our digital assets!</p>
+                <img src="{% static 'images/cybersecurity Analyst.jpeg' %}" alt="Cybersecurity Analyst" class="job-image">
+                <button class="apply-button"><a href="{% url 'user_login' %}" style="text-decoration: none; color: inherit;">Apply Now</a></button>
+
+            </div>
+        </div>
+        <div class="job">
+            <div class="job-title">UX/UI Designer</div>
+            <div class="job-details">
+                <p>Join our design team as a UX/UI Designer and create intuitive user experiences.</p>
+                <p>We offer a creative work environment, flexible scheduling, and opportunities for innovation.</p>
+                <p>Apply now and shape the future of user interface design!</p>
+                <img src="{% static 'images/UXUI Designer.jpeg' %}" alt="UX/UI Designer" class="job-image">
+               <button class="apply-button"><a href="{% url 'user_login' %}" style="text-decoration: none; color: inherit;">Apply Now</a></button>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% include 'footer.html' %}
+{% endblock %}

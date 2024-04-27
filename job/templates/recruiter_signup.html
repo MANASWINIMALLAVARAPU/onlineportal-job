@@ -1,0 +1,77 @@
+{% load static %}
+{% block body %}
+{% include 'navigation.html' %}
+
+<marquee style="font-family: 'Monotype Corsiva'; font-size: 25px; color: darkcyan; font-weight: bold; background-color: black">
+  Recruiter SignUp
+</marquee>
+<hr>
+<form class="container mt-5" method="post" enctype="multipart/form-data" id="signupForm">
+  {% csrf_token %}
+  <div class="form-row">
+    </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="pwd">Password</label>
+      <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter Password" required>
+      <div id="pwd-info" class="text-muted"></div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="cpwdc">Confirm Password</label>
+      <input type="password" class="form-control" id="cpwdc" name="cpwdc" placeholder="Enter Password Again" required>
+    </div>
+  </div>
+  <input type="submit" value="Submit" class="btn btn-primary my-3" style="width: 200px" disabled>
+</form>
+
+<script>
+const pwdInput = document.getElementById('pwd');
+const pwdInfo = document.getElementById('pwd-info');
+const signupForm = document.getElementById('signupForm');
+const submitBtn = signupForm.querySelector('input[type="submit"]');
+
+// Define password validation function using a regular expression
+function validatePassword(password) {
+  const pwdRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^\w\s]).{8,}$/; // Ensures at least 8 characters with at least one digit, lowercase, uppercase, and special character
+  return pwdRegex.test(password);
+}
+
+// Add event listener to password input for real-time validation feedback
+pwdInput.addEventListener('keyup', function() {
+  const password = this.value;
+  const isValid = validatePassword(password);
+
+  pwdInfo.textContent = ''; // Clear previous messages before displaying new ones
+
+  if (isValid) {
+    pwdInfo.textContent = 'Password is strong!';
+    pwdInfo.classList.remove('text-danger');
+    pwdInfo.classList.add('text-success');
+    submitBtn.disabled = false; // Enable submit button if password is valid
+  } else {
+    pwdInfo.textContent = 'Password must be at least 8 characters and include a digit, lowercase letter, uppercase letter, and a special character.';
+    pwdInfo.classList.add('text-danger');
+    pwdInfo.classList.remove('text-success');
+    submitBtn.disabled = true; // Disable submit button if password is invalid
+  }
+});
+
+// Add event listener to confirm password input for matching validation
+signupForm.addEventListener('submit', function(event) {
+  const password = pwdInput.value;
+  const confirmPassword = document.getElementById('cpwdc').value;
+
+  if (password !== confirmPassword) {
+    event.preventDefault(); // Prevent form submission if passwords don't match
+    alert('Passwords do not match! Please re-enter passwords.');
+  }
+});
+</script>
+
+{% if error == "no" %}
+  {% endif %}
+
+{% if error == "yes" %}
+  {% endif %}
+
+{% endblock %}

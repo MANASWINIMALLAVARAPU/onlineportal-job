@@ -1,0 +1,95 @@
+<!-- templates/marketing.html -->
+{% load static %}
+{% block body %}
+{% include 'navigation.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Jobs</title>
+    <style>
+        body {
+            background-color: #f8f9fa; /* Background color for the entire page */
+        }
+        .container {
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: white; /* Background color for the container */
+            color: black;
+        }
+        .job-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .job-details {
+            margin-bottom: 20px;
+        }
+        .job-image {
+            width: 100px; /* Adjust the size as needed */
+            height: 100px; /* Adjust the size as needed */
+            margin-bottom: 10px;
+        }
+        .apply-button {
+            background-color: #007bff; /* Apply button background color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin-top: 10px;
+        }
+        .apply-button:hover {
+            background-color: #0056b3; /* Apply button hover color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Marketing Jobs</h1>
+        <div class="job">
+            <div class="job-title">Marketing Manager</div>
+            <div class="job-details">
+                <p>Join our team as a Marketing Manager and lead strategic marketing initiatives.</p>
+                <p>We offer competitive salaries, benefits, and opportunities for professional growth.</p>
+                <p>Apply now and drive our brand to success!</p>
+                <img src="{% static 'images/marketing_manager.jpg' %}" alt="Marketing Manager" class="job-image">
+                <button class="apply-button">Apply Now</button>
+            </div>
+        </div>
+        <div class="job">
+            <div class="job-title">Digital Marketing Specialist</div>
+            <div class="job-details">
+                <p>Join our digital marketing team and execute innovative online campaigns.</p>
+                <p>We offer a dynamic work environment, competitive pay, and opportunities to expand your skills.</p>
+                <p>Apply now and make an impact in the digital space!</p>
+                <img src="{% static 'images/digital_marketing_specialist.jpg' %}" alt="Digital Marketing Specialist" class="job-image">
+                <button class="apply-button">Apply Now</button>
+            </div>
+        </div>
+        <div class="job">
+            <div class="job-title">Market Research Analyst</div>
+            <div class="job-details">
+                <p>Join our market research team and gather valuable insights to drive business decisions.</p>
+                <p>We offer competitive compensation, training, and opportunities for career advancement.</p>
+                <p>Apply now and shape the future of our products!</p>
+                <img src="{% static 'images/market_research_analyst.jpg' %}" alt="Market Research Analyst" class="job-image">
+                <button class="apply-button">Apply Now</button>
+            </div>
+        </div>
+        <div class="job">
+            <div class="job-title">Social Media Coordinator</div>
+            <div class="job-details">
+                <p>Join our social media team and engage our audience across various platforms.</p>
+                <p>We offer flexible scheduling, creative freedom, and opportunities for growth.</p>
+                <p>Apply now and be part of our online community!</p>
+                <img src="{% static 'images/social_media_coordinator.jpg' %}" alt="Social Media Coordinator" class="job-image">
+                <button class="apply-button">Apply Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% include 'footer.html' %}
+{% endblock %}

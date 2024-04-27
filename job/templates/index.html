@@ -1,0 +1,103 @@
+{% load static %}
+{% block body %}
+{% include 'navigation.html' %}
+<style>
+    .container{
+    max-width:90%
+    }
+    .content{
+    text-align: center;
+    position:absolute;
+    bottom:0;
+    background:rgba(0,0,0,0.5);
+    color: white;
+    height:30px;
+    width:95%;
+    }
+</style>
+<div class="container-fluid" style="margin-top:1%">
+    <img src="{% static 'images/portal.png' %}" style="height:450px; width:100%">
+</div>
+<div class="container" style="background-color: black; height:725px; margin-top:2% ">
+<h1 class="text-center text-white">---|-----||------|OUR PLACED STUDENTS|------||-----|--</h1>
+    <div class="row">
+        <div class="col-md-3">
+            <img src="{% static 'images/f.png'%}" style="width=100%; margin-top:5%; height:200px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Facebook</p>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <img src="{% static 'images/f1.png'%}" style="width=100%; margin-top:5%; height:200px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Amazon</p>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <img src="{% static 'images/f2.png'%}" style="width=100%; margin-top:5%; height:200px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Flipkart</p>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <img src="{% static 'images/f3.png'%}" style="width=100%; margin-top:5%; height:200px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Google</p>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+        <div class="col-md-3">
+            <img src="{% static 'images/f4.png'%}" style="width=90%; margin-top:5%; height:160px; border-radius:50%">
+            <div class="content" style="height:30px; width:91%">
+                <p>JP Morgan</p>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <img src="{% static 'images/f5.png'%}" style="width=100%; margin-top:5%; height:200px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Software sol</p>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <img src="{% static 'images/f6.png'%}" style="width=100%; margin-top:5%; height:190px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Deloite</p>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <img src="{% static 'images/f7.png'%}" style="width=100%; margin-top:5%; height:200px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Barclays</p>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+        <div class="col-md-3">
+            <img src="{% static 'images/f8.png'%}" style="width=100%; margin-top:5%; height:200px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Paypal</p>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <img src="{% static 'images/f9.png'%}" style="width=100%; margin-top:5%; height:220px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Adobe</p>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <img src="{% static 'images/f10.png'%}" style="width=100%; margin-top:5%; height:200px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Infosys</p>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <img src="{% static 'images/f11.png'%}" style="width=100%; margin-top:5%; height:200px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Wipro</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'footer.html' %}
+{% endblock%}

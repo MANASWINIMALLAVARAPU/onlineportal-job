@@ -1,0 +1,108 @@
+{% load static %}
+{% block body %}
+{% include 'user_navigation.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Jobs</title>
+    <style>
+        body {
+            background-color: white; /* Background color for the entire page */
+        }
+        .container {
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: white; /* Background color for the container */
+            color: black;
+        }
+        .job-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .job-details {
+            margin-bottom: 20px;
+        }
+        .job-image {
+            width: 100px; /* Adjust the size as needed */
+            height: 100px; /* Adjust the size as needed */
+            margin-bottom: 10px;
+        }
+        .apply-button {
+            background-color: #007bff; /* Apply button background color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin-top: 10px;
+        }
+        .apply-button:hover {
+            background-color: #0056b3; /* Apply button hover color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Medical Jobs</h1>
+        <div class="job">
+            <div class="job-title">Registered Nurse</div>
+            <div class="job-details">
+                <p>Join our team as a Registered Nurse. Make a difference in the lives of patients with your expertise in intensive care units.</p>
+                <p>We offer competitive salaries, benefits, and opportunities for professional development.</p>
+                <p>Apply now and become a vital part of our healthcare team!</p>
+                <img src="{% static 'images/registerednurse.jpg' %}" alt="Registered Nurse" class="job-image">
+                <button class="apply-button"><a href="{% url 'application' %}" style="text-decoration: none; color: inherit;">Apply Now</a></button>
+
+            </div>
+        </div>
+        <div class="job">
+            <div class="job-title">Medical Assistant</div>
+            <div class="job-details">
+                <p>Join our clinic as a Medical Assistant and play a crucial role in providing quality patient care.</p>
+                <p>Enjoy a dynamic work environment and opportunities for career advancement.</p>
+                <p>Apply now and embark on a rewarding healthcare career!</p>
+                <img src="{% static 'images/medicalassistant.jpeg' %}" alt="Medical Assistant" class="job-image">
+                <button class="apply-button"><a href="{% url 'application' %}" style="text-decoration: none; color: inherit;">Apply Now</a></button>
+
+            </div>
+        </div>
+        <div class="job">
+            <div class="job-title">Pharmacist</div>
+            <div class="job-details">
+                <p>Join our pharmacy team as a Pharmacist and contribute to improving patient outcomes.</p>
+                <p>We offer a supportive work environment and opportunities for professional growth.</p>
+                <p>Apply now and help us deliver exceptional pharmaceutical care!</p>
+                <img src="{% static 'images/phraramcist.jpg' %}" alt="Pharmacist" class="job-image">
+                <button class="apply-button"><a href="{% url 'application' %}" style="text-decoration: none; color: inherit;">Apply Now</a></button>
+
+            </div>
+        </div>
+        <div class="job">
+            <div class="job-title">Medical Lab Technician</div>
+            <div class="job-details">
+                <p>Join our laboratory team as a Medical Lab Technician and contribute to accurate diagnostic testing.</p>
+                <p>We offer competitive compensation and opportunities for career advancement.</p>
+                <p>Apply now and play a crucial role in patient care!</p>
+                <img src="{% static 'images/medicallabtechnician.jpeg' %}" alt="Medical Lab Technician" class="job-image">
+               <button class="apply-button"><a href="{% url 'application' %}" style="text-decoration: none; color: inherit;">Apply Now</a></button>
+
+            </div>
+        </div>
+        <div class="job">
+            <div class="job-title">Dental Hygienist</div>
+            <div class="job-details">
+                <p>Join our dental practice as a Dental Hygienist and promote oral health in the community.</p>
+                <p>Enjoy flexible scheduling and a supportive team environment.</p>
+                <p>Apply now and help patients achieve healthier smiles!</p>
+                <img src="{% static 'images/Dentalhygienist.jpeg' %}" alt="Dental Hygienist" class="job-image">
+                <button class="apply-button"><a href="{% url 'application' %}" style="text-decoration: none; color: inherit;">Apply Now</a></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% include 'footer.html' %}
+{% endblock %}

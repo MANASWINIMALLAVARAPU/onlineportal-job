@@ -1,0 +1,28 @@
+{% load static %}
+<div class="mt-3" style="background-color: black; width:100%; height:350px">
+  <div class="container" >
+    <div class="row">
+    <div class="col-md-4 mt-3">
+      <h3 class="text-white"> Contact information</h3>
+      <p style="color:yellow; font-size: 18px"><i class="fa fa-map-marker text-danger"> KL University, Vaddeswaram, Vijayawada</i></p>
+      <p style="color:yellow; font-size: 18px"><i class="fa fa-envelope text-danger"> jobportal@gmail.com</i></p>
+      <p style="color:yellow; font-size: 18px"><i class="fa fa-mobile text-danger">   +91 1234567890</i></p>
+      <p style="color:yellow; font-size: 18px"><i class="fa fa-globe text-danger">   www.onlinejobportal.com</i></p>
+    </div>
+    <div class="col-md-4 mt-3">
+      <h3 class="text-white">Online placement</h3>
+      <p style="color:yellow; font-size:18px">An employement is a website that deals speciallywith employement or careers. Many employment websites are designed to allow employers to post job requirements for a position to be filled and are commonly known as job boards.</p>
+    </div>
+    <div class="col-md-4 mt-3">
+    <h3 class="text-white">Newsletter</h3>
+    <p style="color:red; font-size:18px">If you want any extra information, please send me your email ID.</p>
+    <form method="post" class="form-inline">
+        {% csrf_token %}
+        <input type="email" name="emailid" placeholder="Email ID" required class="form-control">
+        <input type="submit" value="Send" class="btn btn-primary">
+    </form>
+</div>
+
+  </div>
+</div>
+</div>

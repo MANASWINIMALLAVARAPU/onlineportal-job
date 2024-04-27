@@ -1,0 +1,95 @@
+<!-- templates/financial.html -->
+{% load static %}
+{% block body %}
+{% include 'navigation.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Jobs</title>
+    <style>
+        body {
+            background-color: #f8f9fa; /* Background color for the entire page */
+        }
+        .container {
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: white; /* Background color for the container */
+            color: black;
+        }
+        .job-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .job-details {
+            margin-bottom: 20px;
+        }
+        .job-image {
+            width: 100px; /* Adjust the size as needed */
+            height: 100px; /* Adjust the size as needed */
+            margin-bottom: 10px;
+        }
+        .apply-button {
+            background-color: #007bff; /* Apply button background color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin-top: 10px;
+        }
+        .apply-button:hover {
+            background-color: #0056b3; /* Apply button hover color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Financial Jobs</h1>
+        <div class="job">
+            <div class="job-title">Financial Analyst</div>
+            <div class="job-details">
+                <p>Join our team as a Financial Analyst and provide insightful financial analysis.</p>
+                <p>We offer competitive salaries, opportunities for career growth, and a collaborative work environment.</p>
+                <p>Apply now and contribute to our financial success!</p>
+                <img src="{% static 'images/financial_analyst.jpg' %}" alt="Financial Analyst" class="job-image">
+                <button class="apply-button">Apply Now</button>
+            </div>
+        </div>
+        <div class="job">
+            <div class="job-title">Investment Banker</div>
+            <div class="job-details">
+                <p>Join our investment banking team and advise clients on financial transactions.</p>
+                <p>We offer a dynamic work environment, competitive compensation, and opportunities for professional development.</p>
+                <p>Apply now and be part of our success in the financial markets!</p>
+                <img src="{% static 'images/investment_banker.jpg' %}" alt="Investment Banker" class="job-image">
+                <button class="apply-button">Apply Now</button>
+            </div>
+        </div>
+        <div class="job">
+            <div class="job-title">Financial Planner</div>
+            <div class="job-details">
+                <p>Join our team as a Financial Planner and help clients achieve their financial goals.</p>
+                <p>We offer flexible work arrangements, comprehensive training, and a supportive team environment.</p>
+                <p>Apply now and make a positive impact on people's financial futures!</p>
+                <img src="{% static 'images/financial_planner.jpg' %}" alt="Financial Planner" class="job-image">
+                <button class="apply-button">Apply Now</button>
+            </div>
+        </div>
+        <div class="job">
+            <div class="job-title">Accountant</div>
+            <div class="job-details">
+                <p>Join our accounting team and ensure accurate financial reporting.</p>
+                <p>We offer competitive compensation, opportunities for advancement, and a supportive work culture.</p>
+                <p>Apply now and contribute to our financial integrity!</p>
+                <img src="{% static 'images/accountant.jpg' %}" alt="Accountant" class="job-image">
+                <button class="apply-button">Apply Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% include 'footer.html' %}
+{% endblock %}
